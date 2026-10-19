@@ -2,20 +2,21 @@ package Stack;
 
 import java.util.Stack;
 
-public class ReverseStr {
-    public static String reverse(String str){
+public class ReverseStr{
+    public static String reveString(String str){
         Stack<Character> s = new Stack<>();
         for(int i=0;i<str.length();i++){
             s.push(str.charAt(i));
         }
-        StringBuilder res = new StringBuilder("");
+
+        StringBuilder sb = new StringBuilder("");
         while(!s.isEmpty()){
-            char curr = s.pop();
-            res.append(curr);
+            char c = s.pop();
+            sb.append(c);
         }
-        return res.toString();
+        return sb.toString();
     }
     public static void main(String[] args) {
-        System.out.println(reverse("abcdef"));
+        System.out.println(reveString("abcdef"));
     }
 }

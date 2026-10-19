@@ -4,36 +4,41 @@ public class ll {
     public static class Node{
         int data;
         Node next;
+
         Node(int data){
             this.data = data;
-            next= null;
+            this.next = null;
         }
     }
+
     public static class Stack{
-        public static Node head;
-        public boolean isEmpty(){
+        static  Node head = null;
+        //isempty
+        public static boolean isEmpty(){
             return head == null;
         }
 
-        public void push(int data){
-            Node newnNode = new Node(data);
+        //push
+        public static  void push(int data){
+            Node newNode = new Node(data);
             if(isEmpty()){
-                head = newnNode;
+                head = newNode;
                 return;
             }
 
-            newnNode.next=head;
-            head= newnNode;
+            newNode.next = head;
+            head = newNode;
         }
 
-        public int pop(){
-            if(isEmpty()) return -1;
+        //pop
+        public static int pop(){
             int top = head.data;
-            head=head.next;
+            head= head.next;
             return top;
         }
 
-        public int peek(){
+        //peek
+        public static int peek(){
             if(isEmpty()) return -1;
             return head.data;
         }
