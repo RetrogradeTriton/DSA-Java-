@@ -29,5 +29,5 @@ public class duplicateParan {
         String str2 = "(a-b)";
         System.out.println(isDuplicate(str1));
         System.out.println(isDuplicate(str2));
-    }   
+    }        
 }
